@@ -22,13 +22,31 @@
 
 //////////////////////////////////////////////////////////////
 // Задача №4. Условный оператор If.
-Console.WriteLine("Введите имя пользователя");
-string username = Console.ReadLine();
+// Console.WriteLine("Введите имя пользователя");
+// string username = Console.ReadLine();
 
-if (username.ToLower() == "маша"){
-    Console.WriteLine("Ура, это же МАША!");
-}
-else{
-    Console.Write("Привет, ");
-    Console.WriteLine(username);
-}
+// if (username.ToLower() == "маша"){
+//     Console.WriteLine("Ура, это же МАША!");
+// }
+// else{
+//     Console.Write("Привет, ");
+//     Console.WriteLine(username);
+// }
+
+//////////////////////////////////////////////////////////////
+// Задача №5. Нахождение максимального числа.
+int a = 3;
+int b = 4;
+int c = 5;
+int d = 6;
+int e = 9;
+
+int max = a;
+
+if (b > max) max = b;
+if (c > max) max = c;
+if (d > max) max = d;
+if (e > max) max = e;
+
+Console.Write("Максимальное число: ");
+Console.WriteLine(max);
