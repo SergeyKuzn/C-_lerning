@@ -8,12 +8,12 @@
 
 //////////////////////////////////////////////////////////////
 // Задача №2. Нахождение суммы
-int numberA = 3;
-int numberB = 5;
-Console.WriteLine(numberA + numberB);
+// int numberA = 3;
+// int numberB = 5;
+// Console.WriteLine(numberA + numberB);
 
 //////////////////////////////////////////////////////////////
 // Задача №3. Нахождение частного
-int numberA = 3;
-int numberB = 5;
-Console.WriteLine(numberA + numberB);
+double numberA = 12;
+double numberB = 5;
+Console.WriteLine(numberA / numberB);
