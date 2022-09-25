@@ -35,18 +35,61 @@
 
 //////////////////////////////////////////////////////////////
 // Задача №5. Нахождение максимального числа.
-int a = 3;
-int b = 4;
-int c = 5;
-int d = 6;
-int e = 9;
+// int a = 3;
+// int b = 4;
+// int c = 5;
+// int d = 6;
+// int e = 9;
 
-int max = a;
+// int max = a;
 
-if (b > max) max = b;
-if (c > max) max = c;
-if (d > max) max = d;
-if (e > max) max = e;
+// if (b > max) max = b;
+// if (c > max) max = c;
+// if (d > max) max = d;
+// if (e > max) max = e;
 
-Console.Write("Максимальное число: ");
-Console.WriteLine(max);
+// Console.Write("Максимальное число: ");
+// Console.WriteLine(max);
+
+//////////////////////////////////////////////////////////////
+// Задача №6. Рисуем фигуру.
+Console.Clear();
+
+int xa = 40, ya = 1, 
+    xb = 1, yb = 30,
+    xc = 80, yc = 30;
+
+Console.SetCursorPosition(xa, ya);
+Console.WriteLine('+');
+
+Console.SetCursorPosition(xb, yb);
+Console.WriteLine('+');
+
+Console.SetCursorPosition(xc, yc);
+Console.WriteLine('+');
+
+int x = xa, y = xb;
+int count = 0;
+
+while(count < 10000)
+{
+    int want = new Random().Next(1, 3);
+    if (want == 0)
+    {
+        x = (x + xa) / 2;
+        y = (y + ya) / 2;
+    }
+    if (want == 1)
+    {
+        x = (x + xb) / 2;
+        y = (y + yb) / 2;
+    }
+    if (want == 2)
+    {
+        x = (x + xc) / 2;
+        y = (y + yc) / 2;
+    }
+    Console.SetCursorPosition(x, y);
+    Console.WriteLine("+");
+    count++;
+}
