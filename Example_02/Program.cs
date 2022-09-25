@@ -53,18 +53,51 @@
 ///////////////////////////////////////////////////////////////////////////
 // Задача №3. Нахождение элемента массива по индексу.
 
-int[] array = {12, 23, 4, 56, 567, 234, 5467};
-int n = array.Length;
-int find = 567;
+// int[] array = {12, 23, 4, 56, 567, 234, 5467};
+// int n = array.Length;
+// int find = 567;
 
-int index = 0;
+// int index = 0;
 
-while (index < n)
+// while (index < n)
+// {
+//     if(array[index] == find)
+//     {
+//         Console.WriteLine(index);
+//         break;
+//     }
+//     index++;
+// }
+
+///////////////////////////////////////////////////////////////////////////
+// Задача №4. Нахождение элемента массива по индексу.
+
+
+
+void FillArray(int[] collection)
 {
-    if(array[index] == find)
+    int lenght = collection.Length;
+    int index = 0;
+    while (index < lenght)
     {
-        Console.WriteLine(index);
-        break;
+        collection[index] = new Random().Next(1, 50);
+        index++;
     }
-    index++;
 }
+
+void PrintArray(int[] col)
+{
+    int count = col.Length;
+    int position = 0;
+    Console.WriteLine($"Массив сгенерированный случайным образом:");
+    while (position <count)
+    {
+        Console.Write($"{col[position]} ");
+        position++;
+    }
+}
+
+int[] array = new int[20]; // создание массива из 10 элементов
+
+FillArray(array);
+PrintArray(array);
