@@ -19,24 +19,60 @@
 // маленькие буквы “к” заменить большими “К”, а большие “С” заменить 
 // маленькими “с”.
 
+// string text = "— Я думаю, — сказал князь, улыбаясь, — что, "
+//             + "ежели бы вас послали вместо нашего милого " 
+//             + "Винценгероде, вы бы взяли приступом согласие "
+//             + "прусского короля. Вы так красноречивы. Вы "
+//             + "дадите мне чаю?";
 
-string text = "— Я думаю, — сказал князь, улыбаясь, — что, "
-            + "ежели бы вас послали вместо нашего милого " 
-            + "Винценгероде, вы бы взяли приступом согласие "
-            + "прусского короля. Вы так красноречивы. Вы "
-            + "дадите мне чаю?";
+// string Replace(string text, char oldValue, char newValue)
+// {
+//     string result = String.Empty;
+//     int lenght = text.Length;
+//     for (int i = 0; i < lenght; i++)
+//     {
+//         if (text[i] == oldValue) result = result + $"{newValue}";
+//         else result = result + $"{text[i]}";
+//     }
+//     return result;
+// }
 
-string Replace(string text, char oldValue, char newValue)
+// string newText = Replace(text, ' ', '|');
+// Console.WriteLine(newText);
+
+////////////////////////////////////////////////////////////////////////////////
+// Задача 3. Сортирповка массива
+
+int[] arr = {11, 38, 43, 5, 6, 8, 9, 6, 43, 10, 34, 56};
+
+void PrintArray(int[] array)
 {
-    string result = String.Empty;
-    int lenght = text.Length;
-    for (int i = 0; i < lenght; i++)
+    int count = array.Length;
+    for (int i = 0; i < count; i++)
     {
-        if (text[i] == oldValue) result = result + $"{newValue}";
-        else result = result + $"{text[i]}";
+        Console.Write($"{array[i]} ");
     }
-    return result;
+    Console.WriteLine();
 }
 
-string newText = Replace(text, ' ', '|');
-Console.WriteLine(newText);
+void SelectionSort(int[] array)
+{
+
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        int minPosition = i;
+
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if(array[j] < array[minPosition]) minPosition = j;
+        }
+
+        int temt = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = temt;
+    }
+}
+
+PrintArray(arr);
+SelectionSort(arr);
+PrintArray(arr);
