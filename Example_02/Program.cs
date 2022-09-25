@@ -1,6 +1,6 @@
 ﻿// Лекция №2. Знакомство с функциями и массивами
 
-///////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
 // Задача №1. Нахождение максимума из 9 чисел с помощью функции.
 
 // int a1 = 4;
@@ -28,23 +28,43 @@
 
 // Console.WriteLine($"Максимальное число: {max}");
 
-////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
 // Задача №2. Нахождение максимума из 9 чисел с массивами.
 
-int Max(int arg1, int arg2, int arg3)
+// int Max(int arg1, int arg2, int arg3)
+// {
+//     int result = arg1;
+//     if (arg2 > result) result = arg2;
+//     if (arg3 > result) result = arg3;
+//     return result;
+// }
+
+// int[] array = {12, 34, 456, 435, 1243, 4356, 9546, 76, 143};
+
+// int max = Max(
+//     Max(array[0], array[1], array[2]),
+//     Max(array[3], array[4], array[5]),
+//     Max(array[6], array[7], array[8])
+// );
+
+// Console.WriteLine(max);
+
+
+///////////////////////////////////////////////////////////////////////////
+// Задача №3. Нахождение элемента массива по индексу.
+
+int[] array = {12, 23, 4, 56, 567, 234, 5467};
+int n = array.Length;
+int find = 567;
+
+int index = 0;
+
+while (index < n)
 {
-    int result = arg1;
-    if (arg2 > result) result = arg2;
-    if (arg3 > result) result = arg3;
-    return result;
+    if(array[index] == find)
+    {
+        Console.WriteLine(index);
+        break;
+    }
+    index++;
 }
-
-int[] array = {12, 34, 456, 435, 1243, 4356, 9546, 76, 143};
-
-int max = Max(
-    Max(array[0], array[1], array[2]),
-    Max(array[3], array[4], array[5]),
-    Max(array[6], array[7], array[8])
-);
-
-Console.WriteLine(max);
