@@ -21,26 +21,26 @@ Clear();
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-int num = new Random().Next(1, 100000);
-WriteLine($"Случайным образом сгенерировано число: {num}");
-WriteLine();
+// int num = new Random().Next(1, 100000);
+// WriteLine($"Случайным образом сгенерировано число: {num}");
+// WriteLine();
 
-if (num/100 == 0){
+// if (num/100 == 0){
     
-    WriteLine($"Третьей цифры в числе {num} нет!");
-//    return;
-}
-else{
-    if (num/100 > 0 && num/100 <= 10){
-        WriteLine($"Третья цифра в числе {num} = {num%10}!");
-        return;}
-    if (num/100 > 10 && num/100 <= 100){
-        WriteLine($"Третья цифра в числе {num} = {num%100/10}!!");
-        return;}
-    if (num/100 > 100 && num/100 <= 1000){
-        WriteLine($"Третья цифра в числе {num} = {num%1000/100}!!!");
-        return;}
-}
+//     WriteLine($"Третьей цифры в числе {num} нет!");
+// //    return;
+// }
+// else{
+//     if (num/100 > 0 && num/100 <= 10){
+//         WriteLine($"Третья цифра в числе {num} = {num%10}!");
+//         return;}
+//     if (num/100 > 10 && num/100 <= 100){
+//         WriteLine($"Третья цифра в числе {num} = {num%100/10}!!");
+//         return;}
+//     if (num/100 > 100 && num/100 <= 1000){
+//         WriteLine($"Третья цифра в числе {num} = {num%1000/100}!!!");
+//         return;}
+// }
 
 
 
@@ -53,21 +53,21 @@ else{
 // 7 -> да
 // 1 -> нет
 
-// Write("Введеите число от 1 до 7: ");
-// int day=Convert.ToInt32(ReadLine());
-// if (day==1){
-//     WriteLine("Понедельник");}
-// if (day==2){
-//     WriteLine("Вторник");}
-// if (day==3){
-//     WriteLine("Среда");}
-// if (day==4){
-//     WriteLine("Четверг");}
-// if (day==5){
-//     WriteLine("Пятница");}
-// if (day==6){
-//     WriteLine("Суббота - выходной день!");}
-// if (day==7){
-//     WriteLine("Воскресенье - выходной день!");}
-// if (day > 7 || day < 1){
-//     WriteLine("Такого дня недели не существует!");}
+Write("Введеите число от 1 до 7: ");
+int day=Convert.ToInt32(ReadLine());
+if (day==1){
+    WriteLine("Понедельник");}
+if (day==2){
+    WriteLine("Вторник");}
+if (day==3){
+    WriteLine("Среда");}
+if (day==4){
+    WriteLine("Четверг");}
+if (day==5){
+    WriteLine("Пятница");}
+if (day==6){
+    WriteLine("Суббота - выходной день!");}
+if (day==7){
+    WriteLine("Воскресенье - выходной день!");}
+if (day > 7 || day < 1){
+    WriteLine("Такого дня недели не существует!");}
