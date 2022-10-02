@@ -17,21 +17,19 @@ Clear();
 //int[] array = {};
 //int[] array2 = new int[4];
 
-Write("Введите длину массива ");
+WriteLine("Введите длину массива: ");
 int l = int.Parse(ReadLine()!);
 int[] array = GetBinaryArray(l);
 PrintArray(array);
-WriteLine($"Количество нолей в массиве {ZeroCount(array)}");
+WriteLine($"Количество нулей в массиве равно {ZeroCount(array)}");
 
-
-
-
-int[] GetBinaryArray(int lenght)
+int[] GetBinaryArray(int length)
 {
-    int[] result = new int[lenght];
-    for (int i = 0; i < lenght - 1; i++)
+    Random rnd = new Random();
+    int[] result = new int[length];
+    for (int i = 0; i < length-1; i++)
     {
-        result[i] = new Random().Next(0, 2);
+        result[i] = rnd.Next(0,2);
     }
     return result;
 }
@@ -43,28 +41,16 @@ void PrintArray(int[] inArray)
     {
         Write($"{inArray[i]}, ");
     }
-    Write("\b ");
+   Write("\b ");
     WriteLine("]");
 }
 
-int ZeroCount(int[] InArray)
+int ZeroCount(int[] inArray)
 {
     int result = 0;
-    for (int i = 0; i < InArray.Length; i++)
+    for (int i = 0; i < inArray.Length; i++)
     {
-        if(InArray[i] == 0) result++;
+        if(inArray[i]==0) result++;
     }
     return result;
 }
-
-/////////////////////////////////////////////////////////////////////////////////////////
-// Задача 
-
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////
-// Задача 
