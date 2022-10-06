@@ -11,13 +11,10 @@ Clear();
 
 Write("Задайте длину массива: ");
 int arrayLenght = int.Parse(ReadLine()!);
-
 Write("Задайте минимальное значение: ");
 int minValue = int.Parse(ReadLine()!);
-
 Write("Задайте максимальное значение: ");
 int maxValue = int.Parse(ReadLine()!);
-
 int[] array = GetArray(arrayLenght, minValue, maxValue);
 string strArray = string.Join(" | ", array);
 WriteLine($" [{strArray}] ");
