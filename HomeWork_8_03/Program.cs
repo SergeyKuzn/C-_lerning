@@ -18,7 +18,7 @@ Write("input Matrix1 rows, columns, min val, max val: ");
 int[] paramMatrix1 = GetArrayFromString(ReadLine()!);
 int[,] matrix1Array = FillMatrixArray(paramMatrix1[0], paramMatrix1[1], paramMatrix1[2], paramMatrix1[3]);
 
-Write("input Matrix1 rows, columns, min val, max val: ");
+Write("input Matrix2 rows, columns, min val, max val: ");
 int[] paramMatrix2 = GetArrayFromString(ReadLine()!);
 int[,] matrix2Array = FillMatrixArray(paramMatrix2[0], paramMatrix2[1], paramMatrix2[2], paramMatrix2[3]);
 
